@@ -6,6 +6,7 @@
     <meta name="author" content="Ashraful Alam Ridoy" />
     <title>GotoGrow-MRM Item Management</title>
     <link href="styles/style.css" rel="stylesheet" />
+	<-- worked on item add-->
 </head>
 <body>
 
