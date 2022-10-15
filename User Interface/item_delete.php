@@ -5,6 +5,7 @@
     <meta name="description" content="Allows ability to record an item in the database" />
     <meta name="author" content="Ashraful Alam Ridoy" />
     <title>GotoGrow-MRM Item Management</title>
+    <!-- modified by M Salim Sadman -->
     <link href="styles/style.css" rel="stylesheet" />
 </head>
 <body>
@@ -26,7 +27,7 @@
 </nav>
 
 <hr> 
-<h2>GotoGrow-MRM Item Management - Delete Item</h2>
+<h2>GotoGrow-MRM Item Management - Delete Item from Inventory</h2>
 <p>This page is used to delete an item to the stock database.</p>
 
 <?php

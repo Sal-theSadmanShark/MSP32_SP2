@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="description" content="Allows ability to record an item in the database" />
     <meta name="author" content="Ashraful Alam Ridoy" />
+    <!-- modified by M Salim Sadman -->
     <title>GotoGrow-MRM Item Management</title>
     <link href="styles/style.css" rel="stylesheet" />
 </head>
@@ -26,7 +27,7 @@
 </nav>
 
 <hr> 
-<h2>GotoGrow-MRM Item Management - Edit Item</h2>
+<h2>GotoGrow-MRM Item Management - Edit Item from Inventory</h2>
 <p>This page is used to edit an item to the stock database.</p>
 
 <form method='post' action='item_edit.php'>

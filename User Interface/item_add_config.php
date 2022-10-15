@@ -42,6 +42,7 @@
     $date = $_POST["date"];
     $itemc = $_POST["itemc"];
     $itemmonthlysupply = $_POST["itemmonthlysupply"];
+    $itemSKU = $_POST["itemSKU"];
     $servername = "localhost";
 	$user = "root";
 	$pwd = "";
@@ -70,8 +71,8 @@
         } else {
             //If the connection is successful add the data to the appropirate table
             $sql_table = "stock";
-            $query = "INSERT INTO `$sql_table` (`stockName`, `stockPrice_AUD`, `stockQuantity`, `stockExpiryDate`, `stockCategory`, `stockMonthlySupplierPurchases`)
-            VALUES ('$itemname', '$itemprice', '$itemquantity', '$date', '$itemc', '$itemmonthlysupply')";
+            $query = "INSERT INTO `$sql_table` (`SKU`, `stockName`, `stockPrice_AUD`, `stockQuantity`, `stockExpiryDate`, `stockCategory`, `stockMonthlySupplierPurchases`)
+            VALUES ('$itemSKU','$itemname', '$itemprice', '$itemquantity', '$date', '$itemc', '$itemmonthlysupply')";
             $result = mysqli_query($conn2, $query);
             
             if (!$result) {

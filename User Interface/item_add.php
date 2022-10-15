@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="description" content="Allows ability to record an item in the database" />
     <meta name="author" content="Ashraful Alam Ridoy" />
+    <!-- modified by M Salim Sadman -->
     <title>GotoGrow-MRM Item Management</title>
     <link href="styles/style.css" rel="stylesheet" />
 	<-- worked on item add-->
@@ -27,7 +28,7 @@
 </nav>
 
 <hr> 
-<h2>GotoGrow-MRM Item Management - Add Item</h2>
+<h2>GotoGrow-MRM Item Management - Add Item to Inventory</h2>
 <p>This page is used to add an item to the stock database.</p>
 
 <?php
@@ -57,6 +58,8 @@ if ($proid === "admin" && $propass === "Pa55w.rd" || $type == "Manager" && $id =
     <form method='post' action='item_add_config.php'
         <fieldset>
             <legend><strong>Item Details</strong></legend>
+            <p><label for='itemSKU'>Item SKU: </label>
+            <input type='text' name='itemSKU' id='itemSKU' maxlength='30' pattern='[0-9]+' required/></p>
             <p><label for='itemname'>Item Name: </label>
             <input type='text' name='itemname' id='itemname' maxlength='100' required/></p>
             <p><label for='itemprice'>Item Price (AUD): </label>
