@@ -55,6 +55,7 @@
     
         //Displays the form input
         echo "<h3>Below is the Item data: </h3>
+        <p>Item SKU: $itemSKU</p>
         <p>Item Name: $itemname</p>
         <p>Item Price (AUD): $itemprice</p>
         <p>Item Quantity: $itemquantity</p>

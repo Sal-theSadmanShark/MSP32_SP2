@@ -15,6 +15,7 @@
 <nav>
     <ul>
         <li class="menu"><a href="index.php">Home</a></li>
+        <li class="menu"><a href="add_order.php">Order items</a></li>
         <li class="menu"><a href="check_add.php">Add Member</a></li>
         <li class="menu"><a href="check_edit.php">Edit Member</a></li>
         <li class="menu"><a href="check_delete.php">Delete Member</a></li>
