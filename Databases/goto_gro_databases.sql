@@ -175,3 +175,10 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+/* added the order table to track orders */
+CREATE TABLE `goto_gro_databases`.`custOrder` (`orderNum` INT(16) NOT NULL AUTO_INCREMENT , `itemSKU` VARCHAR(32) NOT NULL , `amount` VARCHAR(32) NOT NULL , PRIMARY KEY (`orderNum`)) ENGINE = InnoDB;
+
+
+/* added a order record */
+INSERT INTO `custOrder` (`orderNum`, `orders`, `isComplete`) VALUES ('1','', '0');
