@@ -20,7 +20,10 @@
     <h1>GotoGrow-MRM Website</h1>
 <nav>
     <ul>
-    <li class="menu"><a href="index.php">Home</a></li>
+        <li class="menu"><a href="index.php">Home</a></li>
+        <li class="menu"><a href="add_order.php">Order items</a></li>
+        <li class="menu"><a href="check_edit_order.php">Edit order</a></li>
+        <li class="menu"><a href="check_delete_order.php">Delete order</a></li>
         <li class="menu"><a href="check_add.php">Add Member</a></li>
         <li class="menu"><a href="check_edit.php">Edit Member</a></li>
         <li class="menu"><a href="check_delete.php">Delete Member</a></li>
@@ -29,6 +32,8 @@
         <li class="menu"><a href="check_sales_delete.php">Delete Sales</a></li>
         <li class="menu"><a href="check_item_add.php">Add item</a></li>
         <li class="menu"><a href="check_item_edit.php">Edit item</a></li>
+        <br>
+        <br>
         <li class="menu"><a href="check_item_delete.php">Delete item</a></li>
     </ul>		
 </nav>
