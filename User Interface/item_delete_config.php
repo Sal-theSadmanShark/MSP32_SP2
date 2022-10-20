@@ -39,10 +39,6 @@
     $sku = $_POST["sku"];
     $itemname = $_POST["itemname"];
     $itemprice = $_POST["itemprice"];
-    $itemquantity = $_POST["itemquantity"];
-    $date = $_POST["date"];
-    $itemc = $_POST["itemc"];
-    $itemmonthlysupply = $_POST["itemmonthlysupply"];
     $servername = "localhost";
 	$user = "root";
 	$pwd = "";
@@ -57,7 +53,6 @@
         <p>Item Stock Keeping Unit: $sku</p>
         <p>Item Name: $itemname</p>
         <p>Item Price (AUD): $itemprice</p>
-        <p>Item Quantity: $itemquantity</p>
         <p>Item Expiry Date: $date </p>
         <p>Item Category: $itemc </p>
         <p>Item Monthly Supplier Purchases: $itemmonthlysupply </p>";
@@ -69,14 +64,9 @@
             //If the connection is successful add the data to the appropirate table
             $sql_table = "stock";
             $query = "DELETE FROM $sql_table WHERE 
-            
             `SKU`='$sku' &&
             `stockName`='$itemname' &&
-            `stockPrice_AUD`='$itemprice' &&
-            `stockQuantity`='$itemquantity' &&
-            `stockExpiryDate`='$date' &&
-            `stockCategory`='$itemc' &&
-            `stockMonthlySupplierPurchases`='$itemmonthlysupply'
+            `stockPrice_AUD`='$itemprice'
             ";
             $result = mysqli_query($conn, $query);
             if (!$result) {

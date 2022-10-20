@@ -9,7 +9,6 @@
     <link href="styles/style.css" rel="stylesheet" />
 </head>
 <body>
-<-- some comment-->
 <h1>GotoGrow-MRM Website</h1>
 <nav>
     <ul>
@@ -59,7 +58,38 @@ if ($result->num_rows > 0 || $proid === "admin" && $propass === "Pa55w.rd") {
 
 
 if ($proid === "admin" && $propass === "Pa55w.rd" || $type == "Manager" && $id == $proid && $pass == $propass) 
-    { echo"
+    { 
+        
+        $result = mysqli_query($conn,"SELECT SKU, stockName, stockPrice_AUD, stockQuantity, stockCategory  FROM stock");
+
+        echo "<table border='1'>
+            <tr>
+            <th>SKU</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price (AUD)</th>
+            <th>Stock</th>
+            </tr>";
+
+            $lowStock = array();
+        while($row = mysqli_fetch_array($result))
+        {
+            echo "<tr>";
+            echo "<td>" . $row['SKU'] . "</td>";
+            echo "<td>" . $row['stockName'] . "</td>";
+            echo "<td>" . $row['stockCategory'] . "</td>";
+            echo "<td>" . $row['stockPrice_AUD'] . "</td>";
+            echo "<td>" . $row['stockQuantity'] . "</td>";
+            echo "</tr>";
+
+            if ($row['stockQuantity']<=5){
+                array_push($lowStock, $row['SKU']);
+            }
+        }
+        echo "</table>";
+    
+    
+        echo"
     <form method='post' action='item_delete_config.php'
     <fieldset>
     <legend><strong>Item Details</strong></legend>
@@ -69,14 +99,6 @@ if ($proid === "admin" && $propass === "Pa55w.rd" || $type == "Manager" && $id =
     <input type='text' name='itemname' id='itemname' maxlength='100' required/></p>
     <p><label for='itemprice'>Item Price (AUD): </label>
     <input type='text' name='itemprice' id='itemprice' maxlength='11' required/></p>
-    <p><label for='itemquantity'>Item Quantity: </label>
-    <input type='text' name='itemquantity' id='itemquantity' pattern='[0-9]+' maxlength='11' required/></p>
-    <p><label for='date' required>Item Expiry Date: </label>
-    <input type='date' name='date' id='date' required/></p>
-    <p><label for='itemc'>Item Category: </label>
-    <input type='text' name='itemc' id='itemc' maxlength='20' required/></p>
-    <p><label for='itemmonthlysupply'>Item Monthly Supplier Purchases: </label>
-    <input type='text' name='itemmonthlysupply' id='itemmonthlysupply' pattern='[0-9]+' maxlength='11' required/></p>
 </fieldset>
         <br>
 
